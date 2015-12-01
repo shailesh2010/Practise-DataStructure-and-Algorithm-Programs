@@ -1,0 +1,25 @@
+tech crunch
+beta.list
+crunchbase
+netflix oss
+
+books:
+hadoop in action
+learning spark
+hadoop the definitive guide
+mining the social web
+
+
+where does the public key stored in linuc instance(.ssh folder/ rsa_)
+create instance prigramaticaly
+
+email professor about how to become data engineer so he can give you some links
+
+mini hw2 specify instance type, authentication key, security rule<- itself an object
+
+play with instance ...enamble monitoring, enable static ip
+
+
+read papers: the google file systems,  dynamo:amazon's highly availale key-value store, voldermort,
+
+makee an application using cloud watch which notify about your bill

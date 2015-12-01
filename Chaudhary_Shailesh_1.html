@@ -1,0 +1,66 @@
+<html>
+<head>
+
+	<style>
+	.headstyle
+	{
+		margin:0px;
+		border: 0px;
+		width:100%;
+	}
+	h1
+	{
+		background-color:navy;
+		color:white;
+	}
+	#btn
+	{
+		background-color:blue;
+		color:white;
+	}
+	#label_value
+	{
+		font-style: bold;
+		font-weight: 700;
+	}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<script type="text/javascript" >
+	function searchfun()
+	{
+		var countries = [
+	    { name: "Brazil", GDP: 1000 },
+	    { name: "Iraq", GDP: 890 },
+	    { name: "US", GDP: 300 },
+	    { name: "India", GDP: 500 }
+		]
+		var c= d3.select("#search").node().value;
+		for(var i=0;i<countries.length;i++)
+		{
+			if(countries[i]["name"]===c)
+			{
+				 d3.select("#label_value").node().innerHTML=countries[i]["name"]+": $"+countries[i]["GDP"];
+				 return;
+				// console.log(countries[i]["GDP"]);
+			}
+		}
+
+		d3.select("#label_value").node().innerHTML=c+" :No data found";
+	}
+</script>
+	
+	
+</script>
+
+</head>
+
+<body class="headstyle">
+	<h1 >Country GDP vs Easy of business</h1>
+	<br><br><br>
+<label>Search:</label>
+<input id="search" type="text" name="search"/>
+<input id="btn" type="button" value="GO" onClick="searchfun()" />
+<label>GDP: </label>
+<label id="label_value"></label>
+</body>
+</html>
